@@ -1,7 +1,7 @@
 package omg.jd.ndkexample;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
@@ -52,5 +52,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
      * @return - quadratic sum of the array
      */
     private native double quadraticSum(double[] toSum);
+
+    /*
+    You can of course define your own native function, then press alt+enter to generate necessary things into C++ files.
+     */
+    //private native int nativeFunction();
 
 }
