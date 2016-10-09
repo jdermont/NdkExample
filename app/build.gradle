@@ -2,13 +2,13 @@ apply plugin: 'com.android.model.application'
 
 model {
     android {
-        compileSdkVersion 23
-        buildToolsVersion "23.0.2"
+        compileSdkVersion 24
+        buildToolsVersion "24.0.3"
 
         defaultConfig {
             applicationId = "omg.jd.ndkexample"
             minSdkVersion.apiLevel 14
-            targetSdkVersion.apiLevel 23
+            targetSdkVersion.apiLevel 24
             versionCode 1
             versionName "1.0"
         }
@@ -58,5 +58,5 @@ model {
 
 dependencies {
     compile fileTree(include: ['*.jar'], dir: 'libs')
-    compile 'com.android.support:appcompat-v7:23.1.1'
+    compile 'com.android.support:appcompat-v7:24.2.1'
 }
