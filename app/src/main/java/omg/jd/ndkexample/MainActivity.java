@@ -1,14 +1,17 @@
 package omg.jd.ndkexample;
 
-import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
+
+    // Used to load the 'native-lib' library on application startup.
     static {
-        System.loadLibrary("ndk-example");
+        System.loadLibrary("native-lib");
     }
 
     @Override
@@ -22,9 +25,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         sumBtn.setOnClickListener(this);
     }
 
+
     @Override
-    public void onClick(View v) {
-        switch (v.getId())
+    public void onClick(View view) {
+        switch (view.getId())
         {
             case R.id.btn_hello:
                 String nativeString = helloFromNative("Your name");
@@ -54,8 +58,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private native double quadraticSum(double[] toSum);
 
     /*
-    You can of course define your own native function, then press alt+enter to generate necessary things into C++ files.
+        You can of course define your own native function,
+        then press alt+enter to generate necessary things into C++ files.
      */
     //private native int nativeFunction();
-
 }
